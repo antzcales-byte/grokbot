@@ -1,5 +1,5 @@
 {
- "equity": 1000.0,
+ "equity": 996.9999676171922,
  "start": 1000.0,
  "peak": 1000.0,
  "equity_series": [
@@ -1490,28 +1490,36 @@
   [
    "2026-11-02 21:08:56.546863+00:00",
    1000.0
+  ],
+  [
+   "2026-11-02 21:09:52.906053+00:00",
+   1000.0
+  ],
+  [
+   "2026-11-02 21:09:58.961878+00:00",
+   996.9999676171922
   ]
  ],
  "status": {
-  "bot_pid": 184512,
-  "watchdog_pid": 184506,
-  "heartbeat": "2026-11-02T21:08:56.553471+00:00",
+  "bot_pid": 195692,
+  "watchdog_pid": 195686,
+  "heartbeat": "2026-11-02T21:10:03.148945+00:00",
   "last_scan": "2026-11-02T21:00:00+00:00",
   "killed": false,
   "halt_day": false,
   "halt_week": false,
-  "cycles_ok": 367
+  "cycles_ok": 368
  },
  "risk": {
-  "daily_loss_pct": 0,
+  "daily_loss_pct": 0.3,
   "daily_limit": 2,
-  "weekly_loss_pct": 0,
+  "weekly_loss_pct": 0.3,
   "weekly_limit": 5,
-  "drawdown_pct": 0,
+  "drawdown_pct": 0.3,
   "dd_limit": 10,
   "open_trades": 0,
   "max_open": 3,
-  "new_today": 0,
+  "new_today": 1,
   "max_new": 4
  },
  "instruments": {
@@ -1535,10 +1543,19 @@
   }
  },
  "trades": [],
- "events": [],
+ "events": [
+  {
+   "ts": "2026-11-02T21:10:03.145558+00:00",
+   "kind": "CLAUDE_DECISION",
+   "msg": "ETHUSD flat none conf 0.00: RSI 41 + ADX 22.4 = weak trend. Price below EMA20/50. No 2R edge. Capital preservation."
+  },
+  {
+   "ts": "2026-11-02T21:10:01.254894+00:00",
+   "kind": "CLAUDE_DECISION",
+   "msg": "BTCUSD flat none conf 0.00: RSI 34.5 oversold but ADX 22.9 too weak, price below EMA20/50. No valid setup."
+  }
+ ],
  "messages": [
-  "[2026-11-01 16:32:19Z] Tradebot started in PAPER mode. Equity 1000.00. Risk/trade 1.00%.",
-  "[2026-11-01 16:50:20Z] Tradebot started in PAPER mode. Equity 1000.00. Risk/trade 1.00%.",
   "[2026-11-01 18:30:21Z] \ud83d\udea8 Error #1: ReadTimeout: HTTPSConnectionPool(host='api.coinbase.com', port=443): Read timed out. (read timeout=20)",
   "[2026-11-01 22:58:32Z] \ud83d\udea8 Error #1: ReadTimeout: HTTPSConnectionPool(host='api.coinbase.com', port=443): Read timed out. (read timeout=20)",
   "[2026-11-01 22:59:57Z] Weekly review: no closed trades yet.",
@@ -1556,44 +1573,45 @@
   "Closed trades: 0  P&L: +0.00 USD",
   "Equity: 1000.00  Peak: 1000.00  Drawdown: 0.00%",
   "Open trades: 0  Open risk: $0.00",
-  "Halts: day=False week=False"
+  "Halts: day=False week=False",
+  "[2026-11-02 21:09:53Z] Closed BTCUSD LONG @ 76738 (test_forced_exit) P&L -3.00 USD = -0.80R",
+  "[2026-11-02 21:09:58Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%."
  ],
  "market": {
   "crypto": {
    "BTC": {
-    "price": 76827,
-    "chg24": -1.339315527046359,
+    "price": 76783,
+    "chg24": -1.3954414060957736,
     "spark": [
-     77866.73,
-     77786.3,
-     77957.09,
-     78209.01,
-     78290.43,
-     78383.85,
-     78457.74,
-     78508.82,
-     78355.14,
-     78255.17,
-     78109.49,
-     78106.25,
-     78210.06,
-     77943.02,
-     77837.74,
-     77925.13,
-     77623.34,
-     77926.81,
-     77919.04,
-     77280.67,
-     77331.55,
-     77272.68,
-     76866.63,
-     76863.38,
-     76826.99
+     77832.44,
+     77744.65,
+     78085.57,
+     78089.22,
+     78364.99,
+     78313.07,
+     78442.98,
+     78586.96,
+     78236.15,
+     78231.47,
+     78060.47,
+     78077.52,
+     78177.3,
+     77916.36,
+     77876.72,
+     77972.01,
+     77658.15,
+     77787.66,
+     77872.29,
+     77318.32,
+     77335.41,
+     77175.4,
+     76902.7,
+     76813.0
     ]
    },
    "ETH": {
-    "price": 2250.83,
-    "chg24": -0.5538889270386844,
+    "price": 2249.71,
+    "chg24": -0.5850341898978831,
     "spark": [
      2262.95,
      2260.72,
@@ -1619,12 +1637,12 @@
      2264.22,
      2246.53,
      2250.65,
-     2250.04
+     2249.7
     ]
    },
    "SOL": {
-    "price": 91.68,
-    "chg24": -2.7564044144231823,
+    "price": 91.62,
+    "chg24": -2.794703221225295,
     "spark": [
      94.25,
      94.12,
@@ -1650,7 +1668,7 @@
      92.49,
      91.8,
      91.77,
-     91.67
+     91.62
     ]
    }
   },
@@ -1662,14 +1680,14 @@
   },
   "spreads": {
    "BTC-USD": {
-    "bid": 76750.57,
-    "ask": 76750.58,
+    "bid": 76729.15,
+    "ask": 76729.16,
     "pct": 0.0
    },
    "ETH-USD": {
-    "bid": 2248.73,
-    "ask": 2248.79,
-    "pct": 0.0027
+    "bid": 2248.41,
+    "ask": 2248.58,
+    "pct": 0.0076
    }
   },
   "candles": {
@@ -2347,7 +2365,7 @@
       78232.5,
       78762.3,
       76553.0,
-      76691.1
+      76753.8
      ]
     ],
     "4H": [
@@ -4039,9 +4057,9 @@
      [
       1793653200,
       91.39,
-      91.63,
+      91.71,
       91.34,
-      91.57
+      91.59
      ]
     ],
     "1D": [
@@ -4717,14 +4735,69 @@
       92.01,
       92.53,
       90.7,
-      91.57
+      91.59
      ]
     ]
    }
   }
  },
- "trade_events": [],
- "claude_decisions": [],
+ "trade_events": [
+  {
+   "ts": "2026-11-02T21:09:53.025771+00:00",
+   "event": "entry",
+   "mode": "paper",
+   "trade_id": 1,
+   "symbol": "BTCUSD",
+   "side": "long",
+   "setup": "test_forced",
+   "tag": "test_forced",
+   "price": 76738.25,
+   "stop": 75584.04131172078,
+   "target": 79046.66737655844,
+   "units": 0.0032578277456157784,
+   "risk_usd": 3.76,
+   "risk_pct": 0.376,
+   "reason": "pipeline test (forced BUY)"
+  },
+  {
+   "ts": "2026-11-02T21:09:53.104410+00:00",
+   "event": "exit",
+   "mode": "paper",
+   "trade_id": 1,
+   "symbol": "BTCUSD",
+   "side": "long",
+   "setup": "test_forced",
+   "entry": 76738.25,
+   "exit": 76738.24,
+   "stop": 75584.04131172078,
+   "target": 79046.66737655844,
+   "pnl_usd": -3.0,
+   "r_result": -0.8,
+   "reason": "test_forced_exit"
+  }
+ ],
+ "claude_decisions": [
+  {
+   "ts": "2026-11-02T21:10:03.144670+00:00",
+   "symbol": "ETHUSD",
+   "bar": "2026-11-02 16:00:00+00:00",
+   "position": "flat",
+   "action": "flat",
+   "setup": "none",
+   "confidence": 0.0,
+   "reason": "RSI 41 + ADX 22.4 = weak trend. Price below EMA20/50. No 2R edge. Capital preservation."
+  },
+  {
+   "ts": "2026-11-02T21:10:01.253999+00:00",
+   "symbol": "BTCUSD",
+   "bar": "2026-11-02 16:00:00+00:00",
+   "position": "flat",
+   "action": "flat",
+   "setup": "none",
+   "confidence": 0.0,
+   "reason": "RSI 34.5 oversold but ADX 22.9 too weak, price below EMA20/50. No valid setup."
+  }
+ ],
  "strategy_lab": [
   {
    "run_ts": "2026-11-02T20:31:43+00:00",
@@ -5591,5 +5664,5 @@
    "status": "research_only"
   }
  ],
- "generated": "2026-11-02 16:09 "
+ "generated": "2026-11-02 16:10 "
 }
