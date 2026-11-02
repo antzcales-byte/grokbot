@@ -1398,17 +1398,25 @@
   [
    "2026-11-02 20:45:24.582444+00:00",
    1000.0
+  ],
+  [
+   "2026-11-02 20:46:16.984859+00:00",
+   1000.0
+  ],
+  [
+   "2026-11-02 20:46:47.243131+00:00",
+   1000.0
   ]
  ],
  "status": {
-  "bot_pid": 174175,
-  "watchdog_pid": 174169,
-  "heartbeat": "2026-11-02T20:45:24.600449+00:00",
+  "bot_pid": 184512,
+  "watchdog_pid": 184506,
+  "heartbeat": "2026-11-02T20:46:47.246836+00:00",
   "last_scan": "2026-11-02T20:00:00+00:00",
   "killed": false,
   "halt_day": false,
   "halt_week": false,
-  "cycles_ok": 344
+  "cycles_ok": 346
  },
  "risk": {
   "daily_loss_pct": 0,
@@ -1445,8 +1453,6 @@
  "trades": [],
  "events": [],
  "messages": [
-  "BTCUSD: bias -0.11 from 40 headlines, 0 X posts",
-  "ETHUSD: bias +0.56 from 40 headlines, 0 X posts",
   "SOLUSD: bias -0.50 from 25 headlines, 0 X posts",
   "[2026-11-01 12:46:32Z] Tradebot started in PAPER mode. Equity 1000.00. Risk/trade 1.00%.",
   "[2026-11-01 15:58:21Z] Tradebot started in PAPER mode. Equity 1000.00. Risk/trade 1.00%.",
@@ -1464,13 +1470,15 @@
   "[2026-11-02 17:46:01Z] Tradebot started in PAPER mode. Equity 1000.00. Risk/trade 1.00%.",
   "[2026-11-02 19:43:48Z] \ud83d\udea8 Error #1: ReadTimeout: HTTPSConnectionPool(host='api.coinbase.com', port=443): Read timed out. (read timeout=20)",
   "[2026-11-02 20:02:01Z] \ud83d\udea8 Error #1: ReadTimeout: HTTPSConnectionPool(host='api.coinbase.com', port=443): Read timed out. (read timeout=20)",
-  "[2026-11-02 20:29:24Z] Tradebot started in PAPER mode. Equity 1000.00. Risk/trade 1.00%."
+  "[2026-11-02 20:29:24Z] Tradebot started in PAPER mode. Equity 1000.00. Risk/trade 1.00%.",
+  "[2026-11-02 20:46:16Z] Tradebot started in PAPER mode. Equity 1000.00. Risk/trade 1.00%.",
+  "[2026-11-02 20:46:47Z] Tradebot started in PAPER mode. Equity 1000.00. Risk/trade 1.00%."
  ],
  "market": {
   "crypto": {
    "BTC": {
-    "price": 76795,
-    "chg24": -1.3388004621364977,
+    "price": 76806,
+    "chg24": -1.3240722630163233,
     "spark": [
      77833.57,
      77894.65,
@@ -1495,12 +1503,13 @@
      77425.7,
      76906.08,
      76903.66,
-     76633.04
+     76633.04,
+     76806.35
     ]
    },
    "ETH": {
-    "price": 2245.12,
-    "chg24": -0.6852913381782291,
+    "price": 2245.61,
+    "chg24": -0.6622432125138722,
     "spark": [
      2261.44,
      2264.09,
@@ -1525,12 +1534,13 @@
      2268.0,
      2247.55,
      2250.13,
-     2237.22
+     2237.22,
+     2245.86
     ]
    },
    "SOL": {
-    "price": 91.3,
-    "chg24": -3.042707691033708,
+    "price": 91.34,
+    "chg24": -3.02096495205168,
     "spark": [
      94.22,
      94.39,
@@ -1555,26 +1565,27 @@
      93.41,
      91.79,
      91.94,
-     90.94
+     90.94,
+     91.42
     ]
    }
   },
   "forex": {},
   "global_": {
-   "mcap_chg24": -2.7224489699831946,
-   "btc_dom": 59.29008049803686,
-   "mcap": 2595761932201.959
+   "mcap_chg24": -2.662665023293782,
+   "btc_dom": 59.29024530102662,
+   "mcap": 2599991395466.3774
   },
   "spreads": {
    "BTC-USD": {
-    "bid": 76794.52,
-    "ask": 76794.53,
+    "bid": 76869.66,
+    "ask": 76869.67,
     "pct": 0.0
    },
    "ETH-USD": {
-    "bid": 2245.32,
-    "ask": 2245.41,
-    "pct": 0.004
+    "bid": 2249.03,
+    "ask": 2249.04,
+    "pct": 0.0004
    }
   },
   "candles": {
@@ -3268,7 +3279,7 @@
       2272.24,
       2314.92,
       2233.5,
-      2241.36
+      2248.34
      ]
     ],
     "4H": [
@@ -5496,5 +5507,5 @@
    "status": "research_only"
   }
  ],
- "generated": "2026-11-02 15:45 "
+ "generated": "2026-11-02 15:47 "
 }
