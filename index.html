@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>grokbot · paper dashboard</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%2307090d'/%3E%3Cpath d='M2 12 L6 6 L9 9 L14 3' stroke='%233dd68c' fill='none' stroke-width='1.6'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="banner" role="status">Paper mode — simulated fills only. No live orders.</div>
+  <main class="wrap">
+    <header class="top">
+      <div>
+        <p class="kicker">grokbot</p>
+        <h1>Paper book</h1>
+        <p class="sub" id="universe">BTC-USD · ETH-USD</p>
+      </div>
+      <div class="top-meta">
+        <p id="refresh-eta" class="muted small"></p>
+      </div>
+    </header>
+
+    <section class="panel equity-card">
+      <div class="panel-head">
+        <div>
+          <p id="generated" class="muted">Loading snapshot…</p>
+        </div>
+        <p id="freshness" class="badge stale" role="status" aria-live="polite">
+          <span class="dot" aria-hidden="true"></span>
+          <span class="badge-text">STALE</span>
+        </p>
+      </div>
+      <div id="equity-card" aria-live="polite">
+        <p class="empty">Loading paper snapshot…</p>
+      </div>
+    </section>
+
+    <section class="panel" id="risk-panel"></section>
+    <section class="panel" id="strategy-panel"></section>
+    <section class="panel" id="trades-panel"></section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Candles</h2>
+        <div class="tfs" role="group" aria-label="Candle timeframe">
+          <button type="button" data-tf="1H" class="active">1H</button>
+          <button type="button" data-tf="4H">4H</button>
+          <button type="button" data-tf="1D">1D</button>
+        </div>
+      </div>
+      <p class="muted small" id="candle-source">BTC-USD, ETH-USD, and SOL-USD from the public Coinbase Exchange candles API. SOL is watch-only.</p>
+      <p class="muted small" id="market-line"></p>
+    </section>
+
+    <section class="charts">
+      <article class="panel chart-card">
+        <header class="chart-head" id="head-BTC-USD"></header>
+        <div class="chart" id="chart-BTC-USD"></div>
+        <p class="chart-foot muted small" id="foot-BTC-USD"></p>
+      </article>
+      <article class="panel chart-card">
+        <header class="chart-head" id="head-ETH-USD"></header>
+        <div class="chart" id="chart-ETH-USD"></div>
+        <p class="chart-foot muted small" id="foot-ETH-USD"></p>
+      </article>
+      <article class="panel chart-card">
+        <header class="chart-head" id="head-SOL-USD"></header>
+        <div class="chart" id="chart-SOL-USD"></div>
+        <p class="chart-foot muted small" id="foot-SOL-USD"></p>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Equity curve</h2>
+        <p class="muted small" id="equity-note"></p>
+      </div>
+      <div id="equity-chart" class="chart equity-chart"></div>
+      <p class="empty hidden" id="equity-empty">No equity points in this snapshot.</p>
+    </section>
+
+    <section class="split">
+      <section class="panel" id="veto-panel"></section>
+      <section class="panel" id="events-panel"></section>
+    </section>
+
+    <footer class="foot muted small">
+      Account figures come only from <code>data/snapshot.json</code>, refreshed every 60 seconds.
+      Candlesticks are loaded in the browser from <code>api.exchange.coinbase.com</code>.
+      This page cannot place orders.
+    </footer>
+  </main>
+  <noscript>
+    <p class="banner">JavaScript is required to read the paper snapshot.</p>
+  </noscript>
+  <script src="https://unpkg.com/lightweight-charts@4.2.3/dist/lightweight-charts.standalone.production.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
