@@ -28,7 +28,7 @@ The workflow does not run for pull requests. The URL starts serving after the me
 
 - A sticky **PAPER MODE** banner.
 - Equity, profit versus start, and a goal bar. If the snapshot has a numeric `goal`, the bar is progress from `start` to that equity target. Otherwise it shows equity as a share of starting capital and says there is no profit target.
-- Risk meters from the snapshot: daily loss (limit 2%), weekly loss (5%), drawdown (10%), open trades (max 3), new trades today (max 4).
+- Risk (STRATEGY MODE v0.2): 1% risk sized from the stop, 8% total open-risk cap gauge, 15% drawdown pause, 2% daily / 5% weekly loss limits, 25% per-coin cap, fee-tier cost filter; strategy book, backtest, why-no-trade, trade events (tests labeled).
 - Closed-trade profit stacked by `setup`, and a two-column grid of closed trades (green when `pnl` is positive, red when it is negative).
 - BTC, ETH, and SOL candlesticks (1H, 4H aggregated from 1H, 1D). ETH is tagged **EXPERIMENTAL** from the snapshot (`EXPERIMENTAL (mean-reversion)` in the seed). SOL is tagged **WATCH ONLY**.
 - Equity curve from `equity_series`.

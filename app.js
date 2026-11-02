@@ -315,7 +315,7 @@
     const scan = status.last_scan ? fmtTs(status.last_scan) : "—";
     const cycles = status.cycles_ok == null ? "—" : String(status.cycles_ok);
     return "Heartbeat " + esc(heartbeat) + " · Last scan " + esc(scan) + " · Cycles " + esc(cycles) +
-      " · Kill switch " + statusBit(!!status.killed) +
+      " · DD pause (15%) " + statusBit(!!status.killed) +
       " · Day halt " + statusBit(!!status.halt_day) +
       " · Week halt " + statusBit(!!status.halt_week);
   }
@@ -324,29 +324,79 @@
     const data = state.snapshot;
     const risk = data.risk || {};
     const status = data.status || {};
+    const sm = data.strategy_mode || {};
+    const rules = sm.rules || {};
+    const fees = sm.fees || {};
     const rows = [
-      { label: "Daily loss", value: risk.daily_loss_pct, limit: risk.daily_limit == null ? 2 : risk.daily_limit, suffix: "%", halt: !!status.halt_day },
-      { label: "Weekly loss", value: risk.weekly_loss_pct, limit: risk.weekly_limit == null ? 5 : risk.weekly_limit, suffix: "%", halt: !!status.halt_week },
-      { label: "Drawdown", value: risk.drawdown_pct, limit: risk.dd_limit == null ? 10 : risk.dd_limit, suffix: "%", halt: false },
-      { label: "Open trades", value: risk.open_trades, limit: risk.max_open == null ? 3 : risk.max_open, suffix: "", halt: false },
-      { label: "New today", value: risk.new_today, limit: risk.max_new == null ? 4 : risk.max_new, suffix: "", halt: false },
+      { label: "Total open risk", value: sm.open_risk_pct, limit: rules.open_risk_cap_pct || 8, halt: false },
+      { label: "Daily loss", value: risk.daily_loss_pct, limit: rules.daily_limit_pct || 2, halt: !!status.halt_day },
+      { label: "Weekly loss", value: risk.weekly_loss_pct, limit: rules.weekly_limit_pct || 5, halt: !!status.halt_week },
+      { label: "Drawdown (pause at)", value: risk.drawdown_pct, limit: rules.dd_pause_pct || 15, halt: !!status.killed },
     ];
     const html = rows.map(function (row) {
       const value = num(row.value);
-      const limit = num(row.limit);
       const shown = Number.isFinite(value) ? value : 0;
-      const cap = Number.isFinite(limit) && limit > 0 ? limit : 0;
+      const cap = num(row.limit);
       const ratio = cap > 0 ? shown / cap : 0;
       const width = Math.max(0, Math.min(100, ratio * 100));
       const tone = row.halt || ratio >= 1 ? "high" : ratio >= 0.6 ? "mid" : "low";
-      const valueText = row.suffix === "%" ? trimNum(shown, 3) + "%" : trimNum(shown, 0);
-      const limitText = row.suffix === "%" ? trimNum(cap, 3) + "%" : trimNum(cap, 0);
-      return '<div><div class="risk-label"><span>' + esc(row.label) + '</span><span>' + esc(valueText) + " / " + esc(limitText) + "</span></div>" +
+      return '<div><div class="risk-label"><span>' + esc(row.label) + '</span><span>' + esc(trimNum(shown, 3) + "% / " + trimNum(cap, 3) + "%") + "</span></div>" +
         '<div class="meter" role="meter" aria-valuemin="0" aria-valuemax="' + esc(String(cap)) + '" aria-valuenow="' + esc(String(shown)) + '" aria-label="' + esc(row.label) + '">' +
           '<div class="meter-fill ' + tone + '" style="width:' + width.toFixed(2) + '%"></div></div></div>';
     }).join("");
+    const hbMs = parseTime(status.heartbeat_file || status.heartbeat);
+    const hbAge = Number.isFinite(hbMs) ? (Date.now() - hbMs) / 1000 : null;
+    const hbTone = hbAge == null ? "high" : hbAge > 300 ? "high" : hbAge > 120 ? "mid" : "low";
+    const nb = data.next_4h_bar_utc ? new Date(data.next_4h_bar_utc).toLocaleString("en-US", { timeZone: "America/New_York", weekday: "short", hour: "numeric", minute: "2-digit" }) + " ET" : "—";
+    const nt = data.no_trade || {};
+    const why = Object.keys(nt).map(function (k) {
+      const r = nt[k] || {};
+      return '<li><b>' + esc(k) + '</b> <span class="kind">' + esc(r.gate || "—") + '</span> ' + esc(r.detail || "") +
+        (r.ts ? '<div class="muted small">' + esc(fmtTs(r.ts)) + "</div>" : "") + "</li>";
+    }).join("");
     document.getElementById("risk-panel").innerHTML =
-      '<h2>Risk limits</h2><div class="risk-grid">' + html + "</div>";
+      '<h2>Risk — Strategy mode</h2>' +
+      '<div class="chips">' +
+        '<span class="chip">Heartbeat <b class="tone-' + hbTone + '">' + (hbAge == null ? "—" : esc(ageLabel(hbMs))) + "</b></span>" +
+        '<span class="chip">Next 4H bar <b>' + esc(nb) + "</b></span>" +
+        '<span class="chip">Risk/trade <b>' + esc(String(rules.risk_per_trade_pct || 1)) + "% sized from stop</b></span>" +
+        '<span class="chip">Per-coin cap <b>' + esc(String(rules.per_coin_cap_pct || 25)) + "%</b></span>" +
+        '<span class="chip">No trade-count cap · stops only tighten</span>' +
+      "</div>" +
+      '<div class="risk-grid">' + html + "</div>" +
+      '<p class="muted small">Cost filter: Coinbase tier <b>' + esc(String(fees.tier || "—").replace(" (fallback)", "")) + "</b> — taker " + esc(String(fees.taker_pct)) + "% / maker " + esc(String(fees.maker_pct)) +
+        "% · round trip ≈ " + esc(String(fees.round_trip_pct)) + "% · costs must be &lt; ⅓R → min stop distance <b>" + esc(String(fees.min_stop_pct)) + "%</b></p>" +
+      '<h2 class="section-gap">Why no trade</h2>' + (why ? '<ul class="feed">' + why + "</ul>" : '<p class="empty">No reason recorded.</p>');
+  }
+
+  function cell(v, d) { return v == null || v === "" ? "—" : esc(typeof v === "number" ? trimNum(v, d == null ? 2 : d) : v); }
+
+  function renderBook() {
+    const data = state.snapshot;
+    const rows = (data.strategies || []).map(function (s) {
+      const st = String(s.status || "");
+      const tone = /^on/.test(st) ? "low" : /exper/.test(st) ? "mid" : "";
+      return "<tr><td><b>" + esc(s.id) + "</b><div class=\"muted small\">" + esc(s.name) + "</div></td><td><span class=\"pill tone-" + tone + "\">" + esc(st) + "</span></td><td>" +
+        cell(s.trades, 0) + "</td><td>" + cell(s.win_rate, 1) + "</td><td>" + cell(s.expectancy_R, 3) + "</td><td>" + cell(s.profit_factor) + "</td></tr>";
+    }).join("");
+    const bt = (data.backtest || []).map(function (b) {
+      const neg = String(b.exp_R).trim().charAt(0) === "-";
+      return "<tr><td>" + esc(b.name) + "</td><td>" + esc(b.trades) + "</td><td>" + esc(b.win) + '</td><td class="' + (neg ? "neg" : "pos") + '">' + esc(b.exp_R) + "</td><td>" + esc(b.pf) + "</td><td>" + esc(b.dd) + "</td></tr>";
+    }).join("");
+    const ev = (data.trade_events || []).slice().reverse().map(function (e) {
+      const t = e.is_test ? ' <span class="pill tone-mid">TEST</span>' : "";
+      const px = e.event === "exit" ? "exit " + priceFmt(e.exit) + " · " + money(e.pnl_usd, true) + (e.r_result != null ? " (" + trimNum(e.r_result, 2) + "R)" : "") : "@ " + priceFmt(e.price) + " stop " + priceFmt(e.stop);
+      return '<li><span class="kind">' + esc(String(e.event || "").toUpperCase()) + "</span> " + esc(e.symbol || "") + " " + esc(e.strategy || e.setup || "") + t + " — " + esc(px) +
+        '<div class="muted small">' + esc(fmtTs(e.ts)) + (e.is_test ? " · excluded from stats" : "") + "</div></li>";
+    }).join("");
+    let host = document.getElementById("book-panel");
+    if (!host) { host = document.createElement("section"); host.className = "panel"; host.id = "book-panel"; const r = document.getElementById("risk-panel"); r.parentNode.insertBefore(host, r.nextSibling); }
+    host.innerHTML = "<h2>Strategy book (paper, tests excluded)</h2>" +
+      '<div class="tscroll"><table class="tbl"><thead><tr><th>Strategy</th><th>Status</th><th>Trades</th><th>Win %</th><th>Exp R</th><th>PF</th></tr></thead><tbody>' + rows + "</tbody></table></div>" +
+      '<h2 class="section-gap">Walk-forward backtest (OOS 2021–2026, fees in)</h2>' +
+      '<div class="tscroll"><table class="tbl"><thead><tr><th>Test</th><th>Trades</th><th>Win %</th><th>Exp R</th><th>PF</th><th>Max DD</th></tr></thead><tbody>' + (bt || '<tr><td colspan="6">No backtest.</td></tr>') + "</tbody></table></div>" +
+      '<p class="muted small">Fewer than 30 trades = not proven. S1 4H fails; S1/S2 stay off pending review.</p>' +
+      '<h2 class="section-gap">Trade events</h2>' + (ev ? '<ul class="feed">' + ev + "</ul>" : '<p class="empty">No entries or exits yet.</p>');
   }
 
   function renderStrategy() {
@@ -587,6 +637,7 @@
     renderUniverse();
     renderEquity();
     renderRisk();
+    renderBook();
     renderStrategy();
     renderTrades();
     renderChartHeads();

@@ -358,3 +358,15 @@ h2 {
   .trade-grid, .split, .equity-grid, .charts, .risk-grid { grid-template-columns: 1fr; }
   .banner { letter-spacing: 0.08em; }
 }
+
+/* strategy mode */
+.chips { display:flex; flex-wrap:wrap; gap:6px; margin:0 0 12px; }
+.chip { font-size:12px; padding:4px 8px; border-radius:999px; background:rgba(127,127,127,.12); }
+.tone-low { color:#22c55e; } .tone-mid { color:#f59e0b; } .tone-high { color:#ef4444; }
+.pill { font-size:11px; padding:2px 7px; border-radius:999px; border:1px solid currentColor; white-space:nowrap; }
+.tscroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.tbl { width:100%; border-collapse:collapse; font-size:13px; min-width:420px; }
+.tbl th, .tbl td { text-align:left; padding:6px 8px; border-bottom:1px solid rgba(127,127,127,.18); }
+.tbl th { font-weight:600; opacity:.75; font-size:12px; }
+.tbl td.neg { color:#ef4444; } .tbl td.pos { color:#22c55e; }
+@media (max-width: 560px) { .tbl { font-size:12px; } .risk-grid { grid-template-columns:1fr !important; } }
