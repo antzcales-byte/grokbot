@@ -4590,18 +4590,22 @@
   [
    "2026-11-04 07:04:19.601634+00:00",
    996.9999676171922
+  ],
+  [
+   "2026-11-04 07:18:12.236517+00:00",
+   996.9999676171922
   ]
  ],
  "status": {
-  "bot_pid": null,
+  "bot_pid": 578035,
   "watchdog_pid": 568056,
-  "heartbeat": "2026-11-04T07:04:19.607296+00:00",
+  "heartbeat": "2026-11-04T07:18:12.276313+00:00",
   "last_scan": "2026-11-04T07:00:00+00:00",
   "killed": false,
   "halt_day": false,
   "halt_week": false,
-  "cycles_ok": 1133,
-  "heartbeat_file": "2026-11-04T07:04:19.608749+00:00"
+  "cycles_ok": 1134,
+  "heartbeat_file": "2026-11-04T07:18:12.277268+00:00"
  },
  "risk": {
   "daily_loss_pct": 0,
@@ -4725,7 +4729,6 @@
   }
  ],
  "messages": [
-  "[2026-11-04 01:08:56Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%.",
   "[2026-11-04 01:19:12Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%.",
   "[2026-11-04 01:52:32Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%.",
   "[2026-11-04 02:02:55Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%.",
@@ -4744,13 +4747,14 @@
   "[2026-11-04 07:02:17Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%.",
   "[2026-11-04 07:02:19Z] Session sentiment (veto-only):",
   "BTCUSD: bias -1.00 from 40 headlines, 0 X posts",
-  "ETHUSD: bias +0.67 from 40 headlines, 0 X posts"
+  "ETHUSD: bias +0.67 from 40 headlines, 0 X posts",
+  "[2026-11-04 07:18:12Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%."
  ],
  "market": {
   "crypto": {
    "BTC": {
-    "price": 77983,
-    "chg24": 1.8863767365873993,
+    "price": 77958,
+    "chg24": 1.8254789689768407,
     "spark": [
      76588.34,
      76639.73,
@@ -4776,12 +4780,12 @@
      76735.9,
      77370.64,
      77726.88,
-     77983.33
+     77958.32
     ]
    },
    "ETH": {
-    "price": 2296.58,
-    "chg24": 2.248199988198902,
+    "price": 2295.89,
+    "chg24": 2.168600746276211,
     "spark": [
      2247.68,
      2255.27,
@@ -4807,12 +4811,12 @@
      2260.5,
      2281.31,
      2290.59,
-     2296.53
+     2295.98
     ]
    },
    "SOL": {
-    "price": 92.85,
-    "chg24": 1.3021619225980625,
+    "price": 92.82,
+    "chg24": 1.2068481023879207,
     "spark": [
      91.77,
      91.82,
@@ -4838,7 +4842,7 @@
      91.76,
      92.23,
      92.71,
-     92.85
+     92.82
     ]
    }
   },
@@ -4850,14 +4854,14 @@
   },
   "spreads": {
    "BTC-USD": {
-    "bid": 77959.35,
-    "ask": 77959.36,
+    "bid": 77976.73,
+    "ask": 77976.74,
     "pct": 0.0
    },
    "ETH-USD": {
-    "bid": 2296.32,
-    "ask": 2296.33,
-    "pct": 0.0004
+    "bid": 2296.63,
+    "ask": 2296.75,
+    "pct": 0.0052
    }
   },
   "candles": {
@@ -7567,7 +7571,7 @@
       92.71,
       93.2,
       89.73,
-      92.93
+      92.84
      ]
     ],
     "4H": [
@@ -9159,5 +9163,5 @@
   }
  },
  "next_4h_bar_utc": "2026-11-04T08:00:00+00:00",
- "generated": "2026-11-04 02:17 "
+ "generated": "2026-11-04 02:18 "
 }
