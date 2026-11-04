@@ -5210,18 +5210,22 @@
   [
    "2026-11-04 14:49:55.150809+00:00",
    996.9999676171922
+  ],
+  [
+   "2026-11-04 15:05:38.811353+00:00",
+   996.9999676171922
   ]
  ],
  "status": {
-  "bot_pid": 656042,
-  "watchdog_pid": 653748,
-  "heartbeat": "2026-11-04T14:49:55.164503+00:00",
-  "last_scan": "2026-11-04T14:00:00+00:00",
+  "bot_pid": 657560,
+  "watchdog_pid": 657553,
+  "heartbeat": "2026-11-04T15:05:40.001526+00:00",
+  "last_scan": "2026-11-04T15:00:00+00:00",
   "killed": false,
   "halt_day": false,
   "halt_week": false,
-  "cycles_ok": 1287,
-  "heartbeat_file": "2026-11-04T14:49:55.167393+00:00"
+  "cycles_ok": 1288,
+  "heartbeat_file": "2026-11-04T15:05:40.004769+00:00"
  },
  "risk": {
   "daily_loss_pct": 0,
@@ -5365,7 +5369,6 @@
   }
  ],
  "messages": [
-  "[2026-11-04 10:08:41Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%.",
   "[2026-11-04 10:40:11Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%.",
   "[2026-11-04 10:55:29Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%.",
   "[2026-11-04 11:03:56Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%.",
@@ -5384,13 +5387,14 @@
   "[2026-11-04 13:47:50Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%.",
   "[2026-11-04 14:06:23Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%.",
   "[2026-11-04 14:37:30Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%.",
-  "[2026-11-04 14:47:55Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%."
+  "[2026-11-04 14:47:55Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%.",
+  "[2026-11-04 15:05:38Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%."
  ],
  "market": {
   "crypto": {
    "BTC": {
-    "price": 79459,
-    "chg24": 2.86298735133936,
+    "price": 79869,
+    "chg24": 3.483889989293882,
     "spark": [
      77324.58,
      77515.94,
@@ -5419,8 +5423,8 @@
     ]
    },
    "ETH": {
-    "price": 2403.88,
-    "chg24": 5.327464162199802,
+    "price": 2427.77,
+    "chg24": 6.4608603753536515,
     "spark": [
      2287.7,
      2292.42,
@@ -5449,8 +5453,8 @@
     ]
    },
    "SOL": {
-    "price": 95.57,
-    "chg24": 2.585612918353096,
+    "price": 96.72,
+    "chg24": 3.947265490637427,
     "spark": [
      93.25,
      93.32,
@@ -5487,14 +5491,14 @@
   },
   "spreads": {
    "BTC-USD": {
-    "bid": 80142.05,
-    "ask": 80149.59,
-    "pct": 0.0094
+    "bid": 80143.5,
+    "ask": 80152.1,
+    "pct": 0.0107
    },
    "ETH-USD": {
-    "bid": 2428.89,
-    "ask": 2429.29,
-    "pct": 0.0165
+    "bid": 2427.09,
+    "ask": 2427.54,
+    "pct": 0.0185
    }
   },
   "candles": {
@@ -6170,9 +6174,9 @@
      [
       1793750400,
       77336.8,
-      79590.0,
+      80331.9,
       75600.6,
-      79341.2
+      80242.7
      ]
     ],
     "4H": [
@@ -6848,9 +6852,9 @@
      [
       1793804400,
       2375.73,
-      2381.63,
+      2443.69,
       2374.96,
-      2378.69
+      2431.83
      ]
     ],
     "1D": [
@@ -7186,9 +7190,9 @@
      [
       1793750400,
       2271.72,
-      2385.36,
+      2443.69,
       2223.0,
-      2383.43
+      2434.65
      ]
     ],
     "4H": [
@@ -7524,9 +7528,9 @@
      [
       1793793600,
       2324.86,
-      2385.36,
+      2443.69,
       2306.93,
-      2378.69
+      2431.83
      ]
     ]
    },
@@ -9814,17 +9818,17 @@
    "coin": "BTCUSD",
    "gate": "waiting:next_4h_bar",
    "detail": "bar 2026-11-04 08:00:00+00:00 already evaluated",
-   "ts": "2026-11-04T14:06:24.594628+00:00",
-   "cycle": "20261104T140623"
+   "ts": "2026-11-04T15:05:39.412923+00:00",
+   "cycle": "20261104T150538"
   },
   "ETHUSD": {
    "coin": "ETHUSD",
    "gate": "waiting:next_4h_bar",
    "detail": "bar 2026-11-04 08:00:00+00:00 already evaluated",
-   "ts": "2026-11-04T14:06:25.131157+00:00",
-   "cycle": "20261104T140623"
+   "ts": "2026-11-04T15:05:39.999733+00:00",
+   "cycle": "20261104T150538"
   }
  },
  "next_4h_bar_utc": "2026-11-04T16:00:00+00:00",
- "generated": "2026-11-04 10:05 "
+ "generated": "2026-11-04 10:06 "
 }
