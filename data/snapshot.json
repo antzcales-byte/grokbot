@@ -5691,7 +5691,6 @@
   }
  ],
  "messages": [
-  "[2026-11-04 12:01:06Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%.",
   "[2026-11-04 12:17:59Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%.",
   "[2026-11-04 12:31:07Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%.",
   "[2026-11-04 12:51:04Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%.",
@@ -5710,13 +5709,14 @@
   "[2026-11-04 16:46:22Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%.",
   "[2026-11-04 17:07:04Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%.",
   "[2026-11-04 17:47:30Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%.",
-  "[2026-11-04 18:07:39Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%."
+  "[2026-11-04 18:07:39Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%.",
+  "[2026-11-04 18:08:07Z] TRENDING: ADDED NEAR-USD to the paper list (experimental, half risk). Reason: WF pass: 35 trades PF 1.12 exp $0.62; vol $53M, spread 0.0508%."
  ],
  "market": {
   "crypto": {
    "BTC": {
-    "price": 80621,
-    "chg24": 3.8028566674072195,
+    "price": 80634,
+    "chg24": 3.7397093577969693,
     "spark": [
      77733.97,
      77474.47,
@@ -5742,12 +5742,12 @@
      80447.75,
      80519.6,
      80430.93,
-     80614.19
+     80634.47
     ]
    },
    "ETH": {
-    "price": 2430.25,
-    "chg24": 5.741738064260071,
+    "price": 2430.8,
+    "chg24": 5.70809488262356,
     "spark": [
      2300.08,
      2287.04,
@@ -5773,12 +5773,12 @@
      2429.44,
      2438.77,
      2427.64,
-     2430.25
+     2430.71
     ]
    },
    "SOL": {
-    "price": 95.94,
-    "chg24": 2.537727956830213,
+    "price": 95.91,
+    "chg24": 2.3932692512142326,
     "spark": [
      93.68,
      93.29,
@@ -5804,7 +5804,7 @@
      97.46,
      96.94,
      96.25,
-     95.94
+     95.91
     ]
    }
   },
@@ -5816,14 +5816,14 @@
   },
   "spreads": {
    "BTC-USD": {
-    "bid": 80606.9,
-    "ask": 80606.91,
+    "bid": 80590.9,
+    "ask": 80590.91,
     "pct": 0.0
    },
    "ETH-USD": {
-    "bid": 2430.82,
-    "ask": 2430.83,
-    "pct": 0.0004
+    "bid": 2430.45,
+    "ask": 2430.59,
+    "pct": 0.0058
    }
   },
   "candles": {
@@ -10155,5 +10155,5 @@
   }
  },
  "next_4h_bar_utc": "2026-11-04T20:00:00+00:00",
- "generated": "2026-11-04 13:07 "
+ "generated": "2026-11-04 13:08 "
 }
