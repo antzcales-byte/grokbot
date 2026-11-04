@@ -5158,18 +5158,22 @@
   [
    "2026-11-04 14:14:37.913862+00:00",
    996.9999676171922
+  ],
+  [
+   "2026-11-04 14:15:37.923653+00:00",
+   996.9999676171922
   ]
  ],
  "status": {
   "bot_pid": 647319,
   "watchdog_pid": 647312,
-  "heartbeat": "2026-11-04T14:14:37.920443+00:00",
+  "heartbeat": "2026-11-04T14:15:37.933483+00:00",
   "last_scan": "2026-11-04T14:00:00+00:00",
   "killed": false,
   "halt_day": false,
   "halt_week": false,
-  "cycles_ok": 1274,
-  "heartbeat_file": "2026-11-04T14:14:37.923237+00:00"
+  "cycles_ok": 1275,
+  "heartbeat_file": "2026-11-04T14:15:37.934880+00:00"
  },
  "risk": {
   "daily_loss_pct": 0,
@@ -5337,8 +5341,8 @@
  "market": {
   "crypto": {
    "BTC": {
-    "price": 78240,
-    "chg24": 1.441144946561409,
+    "price": 78271,
+    "chg24": 1.5681710229050887,
     "spark": [
      77104.26,
      77226.93,
@@ -5363,12 +5367,13 @@
      78393.64,
      78552.63,
      78173.63,
-     78310.95
+     78310.95,
+     78271.52
     ]
    },
    "ETH": {
-    "price": 2313.93,
-    "chg24": 1.57135775126569,
+    "price": 2315.45,
+    "chg24": 1.6860316183915849,
     "spark": [
      2279.48,
      2283.75,
@@ -5393,12 +5398,13 @@
      2321.91,
      2329.56,
      2316.84,
-     2316.48
+     2316.48,
+     2315.48
     ]
    },
    "SOL": {
-    "price": 92.68,
-    "chg24": -0.4165059938841872,
+    "price": 92.81,
+    "chg24": -0.12196818571974567,
     "spark": [
      92.99,
      93.03,
@@ -5435,14 +5441,14 @@
   },
   "spreads": {
    "BTC-USD": {
-    "bid": 78264.43,
-    "ask": 78264.44,
+    "bid": 78290.7,
+    "ask": 78290.71,
     "pct": 0.0
    },
    "ETH-USD": {
-    "bid": 2316.0,
-    "ask": 2316.09,
-    "pct": 0.0039
+    "bid": 2316.85,
+    "ask": 2316.9,
+    "pct": 0.0022
    }
   },
   "candles": {
@@ -6120,7 +6126,7 @@
       77336.8,
       78622.4,
       75600.6,
-      78202.2
+      78264.0
      ]
     ],
     "4H": [
@@ -6798,7 +6804,7 @@
       2316.11,
       2317.02,
       2309.51,
-      2314.32
+      2316.61
      ]
     ],
     "1D": [
@@ -7136,7 +7142,7 @@
       2271.72,
       2336.79,
       2223.0,
-      2313.39
+      2315.26
      ]
     ],
     "4H": [
@@ -7474,7 +7480,7 @@
       2325.08,
       2336.79,
       2306.93,
-      2314.32
+      2316.61
      ]
     ]
    },
@@ -8737,8 +8743,8 @@
  ],
  "strategy_lab": [
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_3y",
    "entry_tf": "4h",
    "tp_r": "2.0",
@@ -8746,35 +8752,35 @@
    "use_mean_reversion": "True",
    "trades": "53",
    "win_rate": "0.3774",
-   "profit_factor": "0.582",
+   "profit_factor": "0.579",
    "avg_r": "-0.22",
    "max_drawdown": "-0.1511",
-   "final_equity": "879.55",
+   "final_equity": "878.86",
    "kill": "False",
    "passes_gate": "False",
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_1y",
    "entry_tf": "4h",
    "tp_r": "2.0",
    "adx_trend": "20.0",
    "use_mean_reversion": "True",
-   "trades": "13",
-   "win_rate": "0.3077",
-   "profit_factor": "0.725",
-   "avg_r": "-0.17",
+   "trades": "12",
+   "win_rate": "0.3333",
+   "profit_factor": "0.914",
+   "avg_r": "-0.101",
    "max_drawdown": "-0.0316",
-   "final_equity": "983.51",
+   "final_equity": "995.86",
    "kill": "False",
    "passes_gate": "False",
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_90d",
    "entry_tf": "4h",
    "tp_r": "2.0",
@@ -8791,8 +8797,8 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_3y",
    "entry_tf": "4h",
    "tp_r": "2.0",
@@ -8800,17 +8806,17 @@
    "use_mean_reversion": "False",
    "trades": "51",
    "win_rate": "0.3725",
-   "profit_factor": "0.582",
-   "avg_r": "-0.219",
+   "profit_factor": "0.579",
+   "avg_r": "-0.22",
    "max_drawdown": "-0.1506",
-   "final_equity": "888.24",
+   "final_equity": "887.54",
    "kill": "False",
    "passes_gate": "False",
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_1y",
    "entry_tf": "4h",
    "tp_r": "2.0",
@@ -8827,8 +8833,8 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_90d",
    "entry_tf": "4h",
    "tp_r": "2.0",
@@ -8845,8 +8851,8 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_3y",
    "entry_tf": "4h",
    "tp_r": "2.0",
@@ -8854,35 +8860,35 @@
    "use_mean_reversion": "True",
    "trades": "94",
    "win_rate": "0.4149",
-   "profit_factor": "0.677",
-   "avg_r": "-0.152",
+   "profit_factor": "0.676",
+   "avg_r": "-0.153",
    "max_drawdown": "-0.1596",
-   "final_equity": "854.78",
+   "final_equity": "854.11",
    "kill": "False",
    "passes_gate": "False",
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_1y",
    "entry_tf": "4h",
    "tp_r": "2.0",
    "adx_trend": "25.0",
    "use_mean_reversion": "True",
-   "trades": "17",
-   "win_rate": "0.2941",
-   "profit_factor": "0.502",
-   "avg_r": "-0.295",
-   "max_drawdown": "-0.0476",
-   "final_equity": "956.08",
+   "trades": "16",
+   "win_rate": "0.3125",
+   "profit_factor": "0.584",
+   "avg_r": "-0.252",
+   "max_drawdown": "-0.0471",
+   "final_equity": "968.09",
    "kill": "False",
    "passes_gate": "False",
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_90d",
    "entry_tf": "4h",
    "tp_r": "2.0",
@@ -8899,8 +8905,8 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_3y",
    "entry_tf": "4h",
    "tp_r": "2.0",
@@ -8908,17 +8914,17 @@
    "use_mean_reversion": "False",
    "trades": "60",
    "win_rate": "0.3667",
-   "profit_factor": "0.543",
+   "profit_factor": "0.54",
    "avg_r": "-0.224",
    "max_drawdown": "-0.1504",
-   "final_equity": "864.17",
+   "final_equity": "863.49",
    "kill": "False",
    "passes_gate": "False",
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_1y",
    "entry_tf": "4h",
    "tp_r": "2.0",
@@ -8935,8 +8941,8 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_90d",
    "entry_tf": "4h",
    "tp_r": "2.0",
@@ -8953,8 +8959,8 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_3y",
    "entry_tf": "4h",
    "tp_r": "3.0",
@@ -8962,35 +8968,35 @@
    "use_mean_reversion": "True",
    "trades": "53",
    "win_rate": "0.3774",
-   "profit_factor": "0.635",
-   "avg_r": "-0.179",
+   "profit_factor": "0.631",
+   "avg_r": "-0.18",
    "max_drawdown": "-0.15",
-   "final_equity": "893.59",
+   "final_equity": "892.54",
    "kill": "False",
    "passes_gate": "False",
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_1y",
    "entry_tf": "4h",
    "tp_r": "3.0",
    "adx_trend": "20.0",
    "use_mean_reversion": "True",
-   "trades": "13",
-   "win_rate": "0.3077",
-   "profit_factor": "0.763",
-   "avg_r": "-0.142",
+   "trades": "12",
+   "win_rate": "0.3333",
+   "profit_factor": "0.963",
+   "avg_r": "-0.071",
    "max_drawdown": "-0.0316",
-   "final_equity": "985.82",
+   "final_equity": "998.2",
    "kill": "False",
    "passes_gate": "False",
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_90d",
    "entry_tf": "4h",
    "tp_r": "3.0",
@@ -9007,8 +9013,8 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_3y",
    "entry_tf": "4h",
    "tp_r": "3.0",
@@ -9016,17 +9022,17 @@
    "use_mean_reversion": "False",
    "trades": "52",
    "win_rate": "0.3846",
-   "profit_factor": "0.705",
-   "avg_r": "-0.136",
+   "profit_factor": "0.701",
+   "avg_r": "-0.138",
    "max_drawdown": "-0.151",
-   "final_equity": "920.07",
+   "final_equity": "918.99",
    "kill": "False",
    "passes_gate": "False",
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_1y",
    "entry_tf": "4h",
    "tp_r": "3.0",
@@ -9043,8 +9049,8 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_90d",
    "entry_tf": "4h",
    "tp_r": "3.0",
@@ -9061,8 +9067,8 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_3y",
    "entry_tf": "4h",
    "tp_r": "3.0",
@@ -9070,35 +9076,35 @@
    "use_mean_reversion": "True",
    "trades": "94",
    "win_rate": "0.4149",
-   "profit_factor": "0.711",
-   "avg_r": "-0.132",
+   "profit_factor": "0.708",
+   "avg_r": "-0.133",
    "max_drawdown": "-0.1563",
-   "final_equity": "868.21",
+   "final_equity": "867.19",
    "kill": "False",
    "passes_gate": "False",
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_1y",
    "entry_tf": "4h",
    "tp_r": "3.0",
    "adx_trend": "25.0",
    "use_mean_reversion": "True",
-   "trades": "17",
-   "win_rate": "0.2941",
-   "profit_factor": "0.526",
-   "avg_r": "-0.274",
-   "max_drawdown": "-0.0482",
-   "final_equity": "958.33",
+   "trades": "16",
+   "win_rate": "0.3125",
+   "profit_factor": "0.613",
+   "avg_r": "-0.229",
+   "max_drawdown": "-0.0471",
+   "final_equity": "970.37",
    "kill": "False",
    "passes_gate": "False",
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_90d",
    "entry_tf": "4h",
    "tp_r": "3.0",
@@ -9115,8 +9121,8 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_3y",
    "entry_tf": "4h",
    "tp_r": "3.0",
@@ -9124,17 +9130,17 @@
    "use_mean_reversion": "False",
    "trades": "71",
    "win_rate": "0.3662",
-   "profit_factor": "0.657",
-   "avg_r": "-0.184",
+   "profit_factor": "0.654",
+   "avg_r": "-0.185",
    "max_drawdown": "-0.1513",
-   "final_equity": "873.38",
+   "final_equity": "872.36",
    "kill": "False",
    "passes_gate": "False",
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_1y",
    "entry_tf": "4h",
    "tp_r": "3.0",
@@ -9151,8 +9157,8 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_90d",
    "entry_tf": "4h",
    "tp_r": "3.0",
@@ -9169,8 +9175,8 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_3y",
    "entry_tf": "1h",
    "tp_r": "2.0",
@@ -9187,8 +9193,8 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_1y",
    "entry_tf": "1h",
    "tp_r": "2.0",
@@ -9205,8 +9211,8 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_90d",
    "entry_tf": "1h",
    "tp_r": "2.0",
@@ -9223,8 +9229,8 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_3y",
    "entry_tf": "1h",
    "tp_r": "2.0",
@@ -9241,8 +9247,8 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_1y",
    "entry_tf": "1h",
    "tp_r": "2.0",
@@ -9259,8 +9265,8 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_90d",
    "entry_tf": "1h",
    "tp_r": "2.0",
@@ -9277,8 +9283,8 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_3y",
    "entry_tf": "1h",
    "tp_r": "2.0",
@@ -9295,8 +9301,8 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_1y",
    "entry_tf": "1h",
    "tp_r": "2.0",
@@ -9313,26 +9319,26 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_90d",
    "entry_tf": "1h",
    "tp_r": "2.0",
    "adx_trend": "25.0",
    "use_mean_reversion": "True",
-   "trades": "31",
-   "win_rate": "0.2258",
-   "profit_factor": "0.136",
-   "avg_r": "-0.514",
-   "max_drawdown": "-0.097",
-   "final_equity": "908.05",
+   "trades": "32",
+   "win_rate": "0.25",
+   "profit_factor": "0.155",
+   "avg_r": "-0.508",
+   "max_drawdown": "-0.1007",
+   "final_equity": "903.42",
    "kill": "False",
    "passes_gate": "False",
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_3y",
    "entry_tf": "1h",
    "tp_r": "2.0",
@@ -9349,8 +9355,8 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_1y",
    "entry_tf": "1h",
    "tp_r": "2.0",
@@ -9367,8 +9373,8 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_90d",
    "entry_tf": "1h",
    "tp_r": "2.0",
@@ -9385,8 +9391,8 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_3y",
    "entry_tf": "1h",
    "tp_r": "3.0",
@@ -9403,8 +9409,8 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_1y",
    "entry_tf": "1h",
    "tp_r": "3.0",
@@ -9421,8 +9427,8 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_90d",
    "entry_tf": "1h",
    "tp_r": "3.0",
@@ -9439,8 +9445,8 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_3y",
    "entry_tf": "1h",
    "tp_r": "3.0",
@@ -9457,8 +9463,8 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_1y",
    "entry_tf": "1h",
    "tp_r": "3.0",
@@ -9475,8 +9481,8 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_90d",
    "entry_tf": "1h",
    "tp_r": "3.0",
@@ -9493,8 +9499,8 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_3y",
    "entry_tf": "1h",
    "tp_r": "3.0",
@@ -9511,8 +9517,8 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_1y",
    "entry_tf": "1h",
    "tp_r": "3.0",
@@ -9529,26 +9535,26 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_90d",
    "entry_tf": "1h",
    "tp_r": "3.0",
    "adx_trend": "25.0",
    "use_mean_reversion": "True",
-   "trades": "31",
-   "win_rate": "0.2258",
-   "profit_factor": "0.173",
-   "avg_r": "-0.492",
-   "max_drawdown": "-0.0932",
-   "final_equity": "911.88",
+   "trades": "32",
+   "win_rate": "0.25",
+   "profit_factor": "0.179",
+   "avg_r": "-0.493",
+   "max_drawdown": "-0.0969",
+   "final_equity": "906.08",
    "kill": "False",
    "passes_gate": "False",
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_3y",
    "entry_tf": "1h",
    "tp_r": "3.0",
@@ -9565,8 +9571,8 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_1y",
    "entry_tf": "1h",
    "tp_r": "3.0",
@@ -9583,8 +9589,8 @@
    "status": "research_only"
   },
   {
-   "run_ts": "2026-11-03T21:21:15+00:00",
-   "data_end": "2026-11-03 20:00:00+00:00",
+   "run_ts": "2026-11-04T14:15:48+00:00",
+   "data_end": "2026-11-04 13:00:00+00:00",
    "window": "last_90d",
    "entry_tf": "1h",
    "tp_r": "3.0",
@@ -9774,5 +9780,5 @@
   }
  },
  "next_4h_bar_utc": "2026-11-04T16:00:00+00:00",
- "generated": "2026-11-04 09:15 "
+ "generated": "2026-11-04 09:16 "
 }
