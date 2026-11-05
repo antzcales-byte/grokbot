@@ -6898,18 +6898,26 @@
   [
    "2026-11-05 09:55:38.163317+00:00",
    996.9999676171922
+  ],
+  [
+   "2026-11-05 10:07:54.166519+00:00",
+   996.9999676171922
+  ],
+  [
+   "2026-11-05 10:08:09.703857+00:00",
+   996.9999676171922
   ]
  ],
  "status": {
-  "bot_pid": null,
-  "watchdog_pid": 854323,
-  "heartbeat": "2026-11-05T09:55:38.170009+00:00",
-  "last_scan": "2026-11-05T09:00:00+00:00",
+  "bot_pid": 856506,
+  "watchdog_pid": 856499,
+  "heartbeat": "2026-11-05T10:08:11.324213+00:00",
+  "last_scan": "2026-11-05T10:00:00+00:00",
   "killed": false,
   "halt_day": false,
   "halt_week": false,
-  "cycles_ok": 1706,
-  "heartbeat_file": "2026-11-05T09:55:38.172221+00:00"
+  "cycles_ok": 1707,
+  "heartbeat_file": "2026-11-05T10:08:11.326654+00:00"
  },
  "risk": {
   "daily_loss_pct": 0,
@@ -7128,8 +7136,6 @@
   }
  ],
  "messages": [
-  "[2026-11-05 04:57:57Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%.",
-  "[2026-11-05 05:24:40Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%.",
   "[2026-11-05 05:36:52Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%.",
   "[2026-11-05 06:04:51Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%.",
   "[2026-11-05 06:24:43Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%.",
@@ -7147,13 +7153,15 @@
   "[2026-11-05 08:46:33Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%.",
   "[2026-11-05 09:05:14Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%.",
   "[2026-11-05 09:25:04Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%.",
-  "[2026-11-05 09:52:38Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%."
+  "[2026-11-05 09:52:38Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%.",
+  "[2026-11-05 10:07:54Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%.",
+  "[2026-11-05 10:08:09Z] Tradebot started in PAPER mode. Equity 997.00. Risk/trade 1.00%."
  ],
  "market": {
   "crypto": {
    "BTC": {
-    "price": 80359,
-    "chg24": 2.5913416169580406,
+    "price": 80355,
+    "chg24": 2.585112171115474,
     "spark": [
      78358.35,
      78536.25,
@@ -7179,12 +7187,12 @@
      80687.29,
      80482.15,
      80329.78,
-     80352.83
+     80363.53
     ]
    },
    "ETH": {
-    "price": 2415.84,
-    "chg24": 4.092816147453269,
+    "price": 2415.56,
+    "chg24": 4.075559868177563,
     "spark": [
      2321.03,
      2327.48,
@@ -7210,12 +7218,12 @@
      2429.92,
      2421.0,
      2413.11,
-     2415.93
+     2416.45
     ]
    },
    "SOL": {
-    "price": 96.75,
-    "chg24": 3.9752473879376216,
+    "price": 96.76,
+    "chg24": 3.939291855977268,
     "spark": [
      93.06,
      93.57,
@@ -7253,14 +7261,14 @@
   },
   "spreads": {
    "BTC-USD": {
-    "bid": 80344.44,
-    "ask": 80346.04,
-    "pct": 0.002
+    "bid": 80347.02,
+    "ask": 80347.03,
+    "pct": 0.0
    },
    "ETH-USD": {
-    "bid": 2416.12,
-    "ask": 2416.2,
-    "pct": 0.0033
+    "bid": 2416.34,
+    "ask": 2416.45,
+    "pct": 0.0046
    }
   },
   "candles": {
@@ -8954,7 +8962,7 @@
       2422.25,
       2434.5,
       2405.7,
-      2413.8
+      2416.15
      ]
     ],
     "4H": [
@@ -11580,24 +11588,24 @@
    "coin": "BTCUSD",
    "gate": "waiting:next_4h_bar",
    "detail": "bar 2026-11-05 04:00:00+00:00 already evaluated",
-   "ts": "2026-11-05T09:05:15.350877+00:00",
-   "cycle": "20261105T090514"
+   "ts": "2026-11-05T10:08:10.289413+00:00",
+   "cycle": "20261105T100809"
   },
   "ETHUSD": {
    "coin": "ETHUSD",
    "gate": "waiting:next_4h_bar",
    "detail": "bar 2026-11-05 04:00:00+00:00 already evaluated",
-   "ts": "2026-11-05T09:05:15.859785+00:00",
-   "cycle": "20261105T090514"
+   "ts": "2026-11-05T10:08:10.827320+00:00",
+   "cycle": "20261105T100809"
   },
   "NEARUSD": {
    "coin": "NEARUSD",
    "gate": "waiting:next_4h_bar",
    "detail": "bar 2026-11-05 04:00:00+00:00 already evaluated",
-   "ts": "2026-11-05T09:05:16.347707+00:00",
-   "cycle": "20261105T090514"
+   "ts": "2026-11-05T10:08:11.321658+00:00",
+   "cycle": "20261105T100809"
   }
  },
  "next_4h_bar_utc": "2026-11-05T12:00:00+00:00",
- "generated": "2026-11-05 05:07 "
+ "generated": "2026-11-05 05:08 "
 }
